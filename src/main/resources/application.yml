@@ -1,0 +1,30 @@
+server:
+  port: 8888
+
+spring:
+  ai:
+    ollama:
+      embedding:
+        enabled: true
+        model: 'mxbai-embed-large'
+      chat:
+        enabled: true
+        model: 'llama3'
+        options:
+          temperature: 0.5
+      base-url: 'http://localhost:11434'
+
+    vectorstore:
+      chroma:
+        client:
+          port: 8000
+          host: 'http://localhost'
+        collection-name: 'embeddings'
+        initialize-schema: true
+
+github-token: ${GITHUB_TOKEN}
+
+rag:
+  temperature: 0.5
+  topK: 16
+  system-prompt: 'You are a helpful assistant that is an expert at extracting the most useful information from a given text. Also bring in extra relevant information to the user query from outside the given context.'
