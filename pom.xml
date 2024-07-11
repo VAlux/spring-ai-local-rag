@@ -8,13 +8,14 @@
     <version>3.3.0</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-  <groupId>com.example</groupId>
+  <groupId>dev.alvo</groupId>
   <artifactId>spring-ai-local-rag</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>spring-ai-local-rag</name>
-  <description>Simple AI Application using OpenAPI Service</description>
+  <description>Local RAG demonstration using Spring AI Ollama integration and langchain4j</description>
   <properties>
     <java.version>17</java.version>
+    <langchain4j.version>0.32.0</langchain4j.version>
   </properties>
 
   <dependencyManagement>
@@ -53,19 +54,19 @@
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-open-ai</artifactId>
-      <version>0.32.0</version>
+      <version>${langchain4j.version}</version>
     </dependency>
 
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-document-loader-github</artifactId>
-      <version>0.32.0</version>
+      <version>${langchain4j.version}</version>
     </dependency>
 
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-easy-rag</artifactId>
-      <version>0.32.0</version>
+      <version>${langchain4j.version}</version>
     </dependency>
 
     <dependency>
